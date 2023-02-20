@@ -1,0 +1,12 @@
+name: LCA-H2
+dependencies:
+- python=3.7.7
+- pip
+- openpyxl
+- matplotlib
+- xlrd
+- numpy
+- pandas
+- scipy
+- ipywidgets
+- traitlets
