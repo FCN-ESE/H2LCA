@@ -1,12 +1,14 @@
-name: tesa
-channels:
-  - conda-forge
+name: LCA-H2
+
 dependencies:
   - python=3.9
+  - pip
   - numpy
   - pyomo
   - pandas
   - statsmodels
+  - matplotlib
+  - xlrd
   - openpyxl
   - ipywidgets
   - traitlets
@@ -14,3 +16,4 @@ dependencies:
   - tensorflow
   - keras
   - scikit-learn
+  - termcolor
