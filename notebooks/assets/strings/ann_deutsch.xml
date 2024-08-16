@@ -1,0 +1,97 @@
+﻿<?xml version="1.0"?>
+<!-- 
+
+XML escape characters
+
+"   &quot;
+'   &apos;
+<   &lt;
+>   &gt;
+//&   &amp;
+
+-->
+<resources>
+    <string name="txt_Einstellungen_Reset">Zurücksetzen</string>
+    <string name="lbl_SliderDatum">Anfangs- und Enddatum: </string>
+    <string name="lbl_Startdatum">Anfangsdatum: </string>
+    <string name="lbl_Enddatum">Enddatum: </string>
+    <string name="hd_Einführung"># Willkommen beim JERI-Tool zur Lastvorhersage mittels neuronaler Netze</string>    
+    <string name="lbl_InputHorizont">Vorhersagehorizont:</string>
+    <string name="lbl_InputAnzahlUnits">Anzahl Neuronen je Layer</string>
+    <string name="lbl_LayerHinzufügen">Anzahl hidden Layer: </string>
+    <string name="lbl_AnzahlHiddenLayer">Anzahl hidden Layer</string>
+    <string name="lbl_InputActivierung">Aktivierungsfunktion wählen</string>
+    <string name="txt_ShowZusammenfassung">Modell fertigstellen</string>
+    <string name="txt_StartTraining">Training starten</string>
+    <string name="lbl_InputSplit">Anteil Trainingsdaten</string>
+    <string name="lbl_InputEpochen">Anzahl Epochen</string>
+    <string name="lbl_ButtonAktivierungen">Änderungen übernehmen</string>
+    <string name="lbl_ButtonOK">OK</string>
+    
+    <string name="Abb_Daten">*Abbildung 1: Input- und Outputdaten des Modells zur Vorhersage der elektrischen Last mittels eines künstlichen neuronalen Netzes*</string>
+    <string name="Abb_Architektur">*Abbildung 2: Architektur eines neuronalen Netzes*</string>
+    <string name="Abb_Aktivierungen">*Abbildung 3: Verfügbare Aktivierungsfunktionen*</string>
+    <string name="Abb_Training">*Abbildung 4: Verlauf der Modellgüte während Training und Validierung*</string>
+    <string name="Abb_Evaluation">*Abbildung 5: Vergleich der vorhergesagten mit der tatsächlichen Last*</string>
+    
+    <string name="hd_Einleitung">## A. Einleitung</string>
+    <string name="txt_Einleitung">Dieses virtuelle Energiesystemlabor führt Sie durch den Arbeitsablauf einer Lastvorhersage mittels eines künstlichen neuronalen Netzes (kNN, bzw. im Englischen ANN für "Artificial Neural Network"). Folgend werden Sie einen Auszug der verwendeten Daten betrachten (Abschnitt B), das neuronale Netz konfigurieren (Abschnitt C) und eine Vorhersage machen (Abschnitt D) können.</string>
+    <string name="txt_Einleitung2">Damit Ihre Änderungen in den folgenden Abschnitten übernommen werden, bestätigen Sie diese jeweils mit Klick auf "OK".</string>
+    
+      
+    <string name="hd_Daten">## B. Daten</string>
+    <string name="txt_Daten1">Zur Vorhersage werden die Daten der folgenden unabhängigen Variablen (auch Inputdaten) und der abhängigen Variablen (auch Outputdaten) verwendet:  
+Inputdaten: Kalenderdaten, Windgeschwindigkeit, Temperatur, direkte und diffuse Sonneneinstrahlung  
+Outputdaten: Elektrische Last  
+Die Daten werden in stündlicher Auflösung für die Jahre 2012 bis 2016 bereitgestellt.</string>
+    <string name="txt_Daten2">Untenstehend sehen Sie eine graphische Darstellung der Daten. Über die Datumsauswahl können Sie den darzustellenden Zeitraum auswählen. </string>
+    
+    <string name="hd_Neuronales_Netz">## C. Neuronales Netz</string>
+    <string name="txt_Neuronales_Netz">Hier haben Sie die Möglichkeit, Anpassungen am neuronalen Netz und an der Vorhersage vorzunehmen. Bestätigen Sie die Änderungen jeweils mit Klick auf "OK", um sie zu übernehmen. Haben Sie alle gewünschten Anpassungen vorgenommen, klicken Sie anschließend auf den Button "Modell fertigstellen" weiter unten.</string>
+    <string name="txt_Anpassungen_list">
+Die folgenden Anpassungen können vorgenommen werden:  
+1. Vorhersagehorizont:          Wie viele Stunden sollen vorhergesagt werden?
+2. Hidden Layer: 
+Wie viele hidden Layer sollen genutzt werden? 
+Wie viele Neuronen pro Layer sollen genutzt werden? 
+Welche Aktivierungsfunktionen sollen auf die Outputs der Neuronen angewandt werden?
+3. Output-Layer:                Welche Aktivierungsfunktion soll hier angewandt werden?
+4. Anzahl der Epochen:          Wie lange soll das Modell trainiert werden?
+    </string>
+   
+    <string name="hd_Vorhersagehorizont">### 1. Vorhersagehorizont</string>
+    <string name="txt_Vorhersagehorizont">Der Vorhersagehorizont bestimmt, für wie viele Stunden die Lastvorhersage erfolgen soll. Er wird in Stunden angegeben und kann zwischen 24h (1 Tag) und 336h (2 Wochen) variiert werden. Der voreingestellte Wert entspricht einer Woche.</string>
+
+    <string name="hd_Hidden_Layer">### 2. Hidden Layer</string>
+    <string name="txt_Hidden_Layer">Die untenstehende Abbildung zeigt die Architektur des neuronalen Netzes. Neben dem Input-Layer und dem Output-Layer existieren zwei hidden Layer. In das Input-Layer fließen die zur Vorhersage verwendeten Daten (s. Abschnitt B), das Output-Layer beinhaltet die vorhergesagte Last (s. Abschnitt D). Mithilfe der hidden Layer erfolgt die eigentliche Bestimmung des Zusammenhangs zwischen den Input- und den Outputdaten. Alle hier vorhandenen Layer sind sogenannte "Dense Layers", d.h. alle Neuronen aller Layer sind mit allen Neuronen des vorhergehenden und nachstehenden Layers verbunden. Üblicherweise erfordern komplexere Probleme komplexere Netzarchitekturen (mehr hidden Layer, mehr Neuronen in den Layern oder komplexere Verbindungen zwischen den Layern.</string>
+    <string name="hd_Anzahl_Neuronen">##### 2.1 Anzahl Neuronen je Layer</string>
+    <string name="txt_Anzahl_Neuronen">Mithilfe des untenstehenden Auswahlfeldes können Sie die Anzahl der Neuronen in den hidden Layern variieren. Mehr Neuronen können, müssen jedoch nicht, zu erhöhter Genauigkeit der Ergebnisse führen und erhöhen den Berechnungsaufwand. Die optimale Neuronenzahl wird daher empirisch bestimmt und auf die Anzahl der hidden Layer abgestimmt.</string> 
+    <string name="txt_Anzahl_Neuronen2">Die Anzahl der Neuronen im Input- und Output-Layer wird hier nicht verändert: Die Anzahl der Neuronen im Input-Layer entspricht der Menge der eingelesenen Datenpunkte; die Anzahl der Neuronen im Output-Layer entspricht dem Vorhersagehorizont.</string>
+    <string name="hd_Anzahl_Hidden_Layer">##### 2.2 Anzahl hidden Layer und Aktivierungsfunktionen</string>
+    <string name="txt_Anzahl_Hidden_Layer">Ist die Anzahl an Neuronen festgelegt, so können Sie die Anzahl der hidden Layer im Netz regulieren. Ein neuronales Netz ohne hidden Layer ist nur in der Lage, lineare Funktionszusammenhänge zu lernen. Ein Netz mit hidden Layern ist hingegen in der Lage, auch komplexere Zusammenänge zu lernen. Wie die Zahl der Neuronen wird die Zahl der hidden Layer empirisch bestimmt.</string>
+    <string name="txt_Aktivierungen">Die Aktivierungsfunktion entscheidet darüber, wie der Aktivierungszustand eines Neurons N von der Eingabe der Neuronen abhängt, die mit diesem Neuron N verbunden sind. In jedes Neuron fließt als Input die gewichtete Summe der Outputs der Neuronen aus dem vorhergehenden Layer. Diese kann theoretisch beliebige Werte annehmen und wird mithilfe der Aktivierungsfunktion transformiert. Dies ist zum Beispiel dann nützlich, wenn bestimmte Funktionswerte vermieden werden sollen oder die Werte in einem festen Intervall liegen sollen. Die untenstehende Abbildung zeigt die vier zur Auswahl stehenden Optionen. Auf der x-Achse ist dabei jeweils der eingehende Input-Wert (die erläuterte gewichtete Summe) sowie auf der y-Achse der resultierende Output des Neurons abgebildet. </string>
+    <string name="txt_Aktivierungen2">Der Tangens Hyperbolicus ("tanh") transformiert die Summe in einen Wert im Intervall (-1;1), die logistische Kurve ("sigmoid") in einen Wert im Intervall (0;1). Diese beiden Aktivierungsfunktionen zeichnen sich durch eine hohe Empfindlichkeit im Bereich um den Nullpunkt und eine deutlich geringere Empfindlichkeit in anderen Wertebereichen aus. Sie werden häufig für Klassifizierungsaufgaben (z.B. Bilderkennung) verwendet. Zur Auswahl stehen auch eine lineare Aktivierung ohne Transformation ("linear") und die Rectifier-Funktion ("relu", Rectified Linear Units). Die ReLu-Funktion nimmt für alle negativen Inputs den Wert Null and und gibt für alle anderen Werte die Inputs unverändert wieder aus. Dies hat gegenüber der transformationslosen Funktion den Vorteil, dass negative Funktionswerte nicht auftreten können. Beide Funktionen entscheiden sich von der tanh- und Sigmoid-Funktion dadurch, dass sie keine Beschränkung des Funktionswertes nach oben vornehmen. Lineare und ReLu-Funktionen werden daher in der Regel für Regressionsaufgaben (wie die hier vorgenommene Zeitreihenvorhersage) verwendet. </string>
+    
+    
+    <string name="hd_Output_Layer">### 3. Output-Layer</string>
+    <string name="txt_Output_Layer">Wie im Abschnitt zu den hidden Layern erläutert, wird die Anzahl Neuronen im Output-Layer nicht variiert, sondern ist von der Anzahl der vorherzusagenden Datenpunkte abhängig. Sie können jedoch bei der Wahl der Aktivierungsfunktionen auch die Aktivierung der Neuronen im Output-Layer auswählen.</string>
+    
+    
+    <string name="hd_Modellübersicht">### 4. Modellübersicht</string>
+    <string name="txt_Modellübersicht">Nachdem Sie alle gewünschten Änderungen eingestellt haben, klicken Sie hier, um diese auf das Modell anzuwenden. Es wird eine Modellübersicht erstellt, sodass Sie die Änderungen prüfen können.</string>
+
+    <string name="hd_Vorhersage">## D. Vorhersage</string>
+    <string name="txt_Vorhersage">Das fertiggestellte Modell kann nun verwendet werden, um eine Vorhersage zu treffen. Dafür werden die vorhandenen Daten in einen Trainings- und einen Testdatensatz aufgeteilt. Sie können selbst entscheiden, welchen Anteil der Daten Sie als Trainings- oder als Testdaten verwenden möchten. Üblicherweise werden 60-80% der Daten als Trainingsdaten verwendet. Im Trainingsschritt lernt das neuronale Netz mithilfe der Trainingsdaten den Zusammenhang zwischen Inputs und Output. Im Evaluationsschritt wird anhand der Testdaten geprüft, ob der gelernte Zusammenhang verallgemeinerbar ist. Ein höherer Anteil an Trainingsdaten ermöglicht ein tieferes Verständnis der Korrelation und kann bessere Vorhersagen ermöglichen. Gleichzeitig steigt damit die Gefahr des Overfitting: Das Netz wird so stark auf die Trainingsdaten trainiert, dass es nicht verallgemeinerbare Zusammenhänge lernt.</string>
+    <string name="txt_Vorhersage2">Sie können das Verhältnis zwischen Trainings- und Testdaten mit dem untenstehenden Schieberegler variieren. Voreingestellt ist Trainingsdatenanteil von 80%.</string>
+    <string name="hd_Training">### 1. Training und Validierung</string>
+    <string name="txt_Training">Im Trainingsschritt lernt das Modell den Zusammenhang zwischen dem Label (hier: der Last) und den Eigenschaften (den restlichen Daten). Der Trainingsdatensatz wird vollständig durchlaufen und es werden Lastvorhersagen getroffen. Diese werden dann mit den tatsächlichen Lasten abgeglichen und die Abweichungen zwischen Vorhersage und tatsächlicher Last bestimmt. Mittels dieser Abweichungen werden dann die Gewichte der neuronalen Verbindungen angepasst, sodass die Vorhersage dem tatsächlichen Wert im nächsten Durchlauf möglichst nah kommt. Die Anpassung erfolgt dabei vom letzten Layer beginnend und bewegt sich „rückwärts“ durch das Netz, weshalb dieser Prozess als Backpropagation (nach dem Englischen „backwards propagation of errors“) bezeichnet wird. Iterativ wird die Abfolge von Vorhersage und Backpropagation wiederholt, um sich an den realen Wert weiter und weiter anzunähern. Ein Durchlauf der Abfolge wird als eine Epoche bezeichnet; die Anzahl der Epochen gibt folglich die Anzahl der Durchläufe durch den Datensatz an.</string>
+    <string name="txt_Training2">Sie können die Anzahl der zu durchlaufenden Epochen mithilfe des untenstehenden Feldes variieren. Zulässig sind Werte zwischen 1 und 500. Mehr Durchläufe können mit einer höheren Genauigkeit einhergehen, erhöhen jedoch auch die Berechnungszeit. Zudem steigt mit zunehmenden Durchläufen die Gefahr des Overfitting.</string>
+    <string name="txt_Training3">Ein Klick auf den untenstehenden Button startet das Training. Vor dem Training werden die Daten eingelesen und normiert (d.h. auf das Intervall [0;1] skaliert) und im Anschluss an das Training erfolgt automatisch eine Evaluation mithilfe der Testdaten.</string>
+    
+    <string name="txt_Validierung">Die obenstehende Grafik zeigt den Trainingsfortschritt mithilfe verschiedener Metriken an. Diese messen die Modellgüte in From von Abweichungen der vorhergesagten von den tatsächlichen Lasten. Der Mean Absolute Error (MAE) ist der Mittelwert der betragsmäßigen Abweichung der vorhergesagten von den tatsächlichen Lasten. Alternativ kann der Mean Squared Error (MSE) berechnet werden, indem die Abweichungen quadriert werden und ihr Mittelwert berechnet wird. Die Wurzel des Mittelwertes ist der RMSE. Dieser verleiht durch die Quadrierung gegenüber dem MAE besonders hohen Abweichungen mehr Gewicht. Alle hier dargestellten Metriken beziehen sich auf die skalierten Daten, die in das Modell einfließen.</string>
+    <string name="txt_Validierung2">Die Grafiken zeigen den Verlauf der Metriken für das Training und die Valididerung, welche während des Trainings durchgeführt wurde. Dafür wurde ein Teil der Trainingsdaten als Validierungsdatensatz (hier: 20% der Trainingsdaten) verwendet. Während des Trainings wurde in jeder Epoche eine Vorhersage für den Validierungsdatensatz gemacht und die Güte dieser Vorhersage bestimmt. Dies hilft dabei, Overfitting zu vermeiden: Für den Trainingsdatensatz steigt die Modellgüte im Verlauf der Epochen immer (d.h. die Werte der Metriken werden kleiner), da das Modell mit diesen Daten den Funktionszusammenhang lernt. Nimmt die Modellgüte im Verlauf der Validierung nicht zu, so hat das Modell Zusammenhänge gelernt, die nur auf die Trainingsdaten anwendbar sind, jedoch nicht auf andere Daten: Es liegt Overfitting vor.</string>
+
+    <string name="hd_Evaluierung">### 2. Evaluierung / Testen</string>
+    <string name="txt_Evaluierung">Im letzten Schritt wird die Vorhersage für den eingangs gewählten Vorhersagehorizont getroffen. Die Vorhersage geschieht dabei für Zeitpunkte, deren tatsächliche Last bekannt ist, sodass damit gleichzeitig die Vorhersagefähigkeit des Modells getestet werden kann. Hierfür werden die zuvor "beiseite gelegten" Testdaten verwendet. Diese wurden nicht verwendet, um das Modell zu trainieren und werden gegenüber dem Modell wie ungelabelte Daten behandelt. Das Modell erhält diese Daten und trifft eine Vorhersage, welche dann mit den tatsächlichen Labels verglichen wird. Es werden die im Abschnitt zum Training erläuterten Metriken sowie zusätzlich die mittlere prozentuale Abweichung (Mean Absolute Percentage Error, MAPE) berechnet. Dafür wird für jeden Datenpunkt der Betrag der Abweichung in Relation zum korrekten Wert gesetzt und der Mittelwert der relativen Abweichung über alle Datenpunkte hinweg bestimmt. Die untenstehende Abbildung zeigt den Vergleich zwischen vorhergesagtem und tatsächlichem Lastverlauf.</string>
+
+</resources>

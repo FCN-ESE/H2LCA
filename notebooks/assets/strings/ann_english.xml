@@ -1,0 +1,100 @@
+﻿<?xml version="1.0"?>
+<!-- 
+
+XML escape characters
+
+"   &quot;
+'   &apos;
+<   &lt;
+>   &gt;
+//&   &amp;
+
+-->
+<resources>
+    <string name="txt_Einstellungen_Reset">Reset</string>
+    <string name="lbl_SliderDatum">Start date and end date: </string>
+    <string name="lbl_Startdatum">Start date: </string>
+    <string name="lbl_Enddatum">End date: </string>
+    <string name="hd_Einführung"># Welcome to the JERI load forecasting tool using artificial neural networks</string>    
+    <string name="lbl_InputHorizont">Forecast horizon</string>
+    <string name="lbl_InputAnzahlUnits">Number of neurons per layer</string>
+    <string name="lbl_LayerHinzufügen">Number of hidden layers: </string>
+    <string name="lbl_AnzahlHiddenLayer">Number of hidden layers</string>
+    <string name="lbl_InputActivierung">Choose activation</string>
+    <string name="txt_ShowZusammenfassung">Compile model</string>
+    <string name="txt_StartTraining">Start training</string>
+    <string name="lbl_InputSplit">Training data share</string>
+    <string name="lbl_InputEpochen">Number of epochs</string>
+    <string name="lbl_ButtonAktivierungen">Confirm changes</string>
+    <string name="lbl_ButtonOK">OK</string>
+    
+    
+    <string name="Abb_Daten">*Figure 1: Input data and output data of the ANN model for predicting electrical load*</string>
+    <string name="Abb_Architektur">*Figure 2: Architecture of a neural network*</string>
+    <string name="Abb_Aktivierungen">*Figure 3: Available activation functions*</string>
+    <string name="Abb_Training">*Figure 4: Model fit during training and validation*</string>
+    <string name="Abb_Evaluation">*Figure 5: Comparison of predicted and actual load*</string>
+    
+    
+    <string name="hd_Einleitung">## A. Introduction</string>
+    <string name="txt_Einleitung">This virtual energy system laboratory guides you through the workflow of making a load forecast using an artificial neural network. You will be able to take a look at an excerpt of the data used (section B), to configure the neural network (section C) and to make a prediction (section D).</string>
+    <string name="txt_Einleitung2">Confirm the changes made in the following sections by clicking on "OK".</string>
+    
+      
+    <string name="hd_Daten">## B. Data</string>
+    <string name="txt_Daten1">Data of the following independent variables (also input data) and dependent variables (also output data) is used for prediction:  
+Input data: Date, wind speed, temperature, direct and diffuse solar radiation  
+Output data: Electrical load  
+The data is provided in hourly resolution for the years 2012 through 2016.</string>
+    <string name="txt_Daten2">Below you can see a graphical representation of the data. Using the date selection, you can set start and end dates for the graph.</string>
+    
+    <string name="hd_Neuronales_Netz">## C. Neural network</string>
+    <string name="txt_Neuronales_Netz">In this section, you can make adjustments to the neural network and the forecast. Confirm the changes by clicking on "OK" to accept them. Once you have completed the desired adjustments, click on the "Compile model" button below.</string>
+    <string name="txt_Anpassungen_list">
+You can make the following changes:  
+
+1. Forecast horizon:          For how many hours should the load be predicted?
+2. Hidden layers: 
+How many hidden layers should be included in the model? 
+How many neurons should the hidden layers have? 
+Which activation functions should be applied to the outputs of the neurons?
+3. Output layer:                Which activation function should be applied here?
+4. Number of epochs:          For how long should the model be trained?
+    </string>
+   
+    <string name="hd_Vorhersagehorizont">### 1. Forecast horizon</string>
+    <string name="txt_Vorhersagehorizont">The forecast horizon determines for how many hours the load should be predicted. It is specified in hours and can be varied between 24h (1 day) and 336h (2 weeks). The default value corresponds to one week.</string>
+
+    <string name="hd_Hidden_Layer">### 2. Hidden layers</string>
+    <string name="txt_Hidden_Layer">The figure below shows the architecture of the neural network. The default network consists of an input layer, an output layer and two hidden layers. The input layer contains the data used for the forecast (see section B), the output layer contains the predicted load (see section D). With the help of the hidden layers, the relationship between the inputs and the output is determined. All layers used here are so-called "Dense Layers", i.e. all neurons of all layers are connected to all neurons of the preceding and following layer. Usually, more complex problems require more complex network architectures (more hidden layers, more neurons in the layers or more complex connections between the layers).</string>
+    <string name="hd_Anzahl_Neuronen">##### 2.1 Number of neurons per layer</string>
+    <string name="txt_Anzahl_Neuronen">Using the selection box below, you can vary the number of neurons in the hidden layers. More neurons can, but do not have to, lead to more accurate results and increase the computation time. The optimal number of neurons is therefore determined empirically and tuned together with the number of hidden layers.</string> 
+    <string name="txt_Anzahl_Neuronen2">The number of neurons in the input and output layer is not changed here. The number of neurons in the input layer corresponds to the number of data points read in and the number of neurons in the output layer corresponds to the forecast horizon.</string>
+    <string name="hd_Anzahl_Hidden_Layer">##### 2.2 Number of hidden layers and activations</string>
+    <string name="txt_Anzahl_Hidden_Layer">Once you have set the number of neurons, you can adjust the number of hidden layers in the network. A neural network without hidden layers is only able to learn linear functional connections. A network with hidden layers, however, is able to learn more complex connections. Like the number of neurons, the number of hidden layers is determined empirically.</string>
+    <string name="txt_Aktivierungen">The activation function determines how the activation state of a neuron N depends on the input of the neurons that are connected to this neuron N. The input to each neuron N is the weighted sum of the outputs of the neurons that N is connected to in the previous layer. Theoretically, this sum can have arbitrary values, which is why it is transformed using the activation function. This is useful, for example, when certain function values are to be avoided or the values are to lie in a fixed interval. The figure below shows the four available options. The x-axis shows the input value (the weighted sum mentioned above) and the y-axis shows the resulting output of the neuron. </string>
+    <string name="txt_Aktivierungen2">The hyperbolic tangent ("tanh") transforms the sum into a value in the interval (-1;1), the logistic curve ("sigmoid") into a value in the interval (0;1). These two activation functions are characterized by a high sensitivity for inputs around zero and a significantly lower sensitivity in other value ranges. They are often used for classification tasks (e.g. image recognition). A linear activation without transformation ("linear") and the Rectifier function ("relu", Rectified Linear Units) are also available. The ReLu function outputs zero for all negative inputs and outputs the inputs unchanged for all other values. This has the advantage over the transformationless function that negative function values cannot occur. Both functions differ from the tanh and sigmoid function in that they do not impose an upper limit on the function value. Linear and ReLu functions are therefore usually used for regression tasks (such as the time series prediction performed here).</string>
+    
+    
+    <string name="hd_Output_Layer">### 3. Output layer</string>
+    <string name="txt_Output_Layer">As explained in the section on hidden layers, the number of neurons in the output layer is not modified manually but depends on the number of data points to be predicted. However, when selecting the activations functions in the hidden layers, you can also select the activation of the neurons in the output layer.</string>
+    
+    
+    <string name="hd_Modellübersicht">### 4. Model summary</string>
+    <string name="txt_Modellübersicht">After making all desired changes, click here to apply them to the model. A model summary is created which allows reviewing the changes.</string>
+
+    <string name="hd_Vorhersage">## D. Forecast</string>
+    <string name="txt_Vorhersage">The finished model can now be used to make a prediction. For this purpose, the existing data is divided into separate training and test data sets. You can determine how much of the data you want to use as training or test data. Usually 60-80% of the data is used as training data. In the training step, the neural network uses the training data to learn the relationship between inputs and outputs. In the evaluation step, the test data is used to check whether the learned relationship can be generalized to data not contained in the training data set. A higher proportion of training data enables a deeper understanding of the relationship between inputs and outputs and can make better predictions possible. At the same time, this increases the risk of overfitting: the network is trained so strongly on the training data that it learns functional relationships that cannot be generalized.</string>
+    <string name="txt_Vorhersage2">You can vary the shares of training and test data with the slider below. By default, 80% of the training data is used as training data.</string>
+    <string name="hd_Training">### 1. Training and validation</string>
+    <string name="txt_Training">During training, the model learns the relationship between the label (here: the electrical load) and the properties (the other data). Load predictions are made for the data in the training dataset. The predictions are then compared to the actual loads and the deviations between predictions and actual loads are determined. These deviations are then used to adjust the weights of the neural connections so that in the next run, the prediction is as close as possible to the actual value. The adjustment is done starting from the last layer and moves "backwards" through the network, which is why this process is called backpropagation (from "backwards propagation of errors"). Iteratively, the sequence of prediction and backpropagation is repeated to get closer and closer to the real value. One run of the sequence is called an epoch. The number of epochs thus indicates the number of runs through the data set.</string>
+    <string name="txt_Training2">You can vary the number of epochs by using the box below. Values between 1 and 500 can be input; a higher number of epochs may result in higher accuracy, but also increases the calculation time and the risk of overfitting.</string>
+    <string name="txt_Training3">Clicking on the button below will start the training. Prior to the training, the data is read in and normalized (i.e. scaled to the interval [0;1]) and after the training an evaluation is automatically performed using the test data.</string>
+    
+    <string name="txt_Validierung">The chart above shows the training progress using various metrics. These metrics measure the quality of the model as deviations between the predicted and actual loads. The Mean Absolute Error (MAE) is the average of the absolute deviations between the predicted and actual loads. Alternatively, the Mean Squared Error (MSE) can be calculated by squaring the deviations and calculating their average. The square root of the mean value is the RMSE, which gives more weight to particularly high deviations compared to the MAE. All metrics plotted in the graph are computed using the normalized data that is fed into the model.</string>
+    <string name="txt_Validierung2">The graphs show the development of the metrics during training and validation performed alongside. A part of the training data was used as validation data set (here: 20% of the training data). During the training, a prediction was made for the validation data set in each epoch and the quality of this prediction was determined. This helps with avoiding overfitting: For the training data set, the model quality always increases over time (i.e. the metrics' values become smaller), since the model learns the relationship between the label and the other data with this dataset. If the model quality does not increase over the course of the validation, the model has learned relationships that are only applicable to the training data, but not to other data: The model is overfit to the training data.</string>
+
+    <string name="hd_Evaluierung">### 2. Evaluation/Testing</string>
+    <string name="txt_Evaluierung">In the last step, the prediction is made for the forecast horizon selected at the beginning. Since the prediction is made for points in time for which the actual load is known, the predictive power of the model can be tested at the same time. For this purpose, the test data that was previously "set aside" is used. This data was not used to train the model and is treated as unlabeled data in relation to the model. The model is fed this data and makes a prediction, which is then compared with the actual labels. The metrics explained in the section on training, as well as the Mean Absolute Percentage Error (MAPE) are calculated. The MAPE is calculated by dividing the absolute deviation for each data point by the correct value. The mean value of this relative deviation across all data points (i.e. the MAPE) is then calculated. The figure below shows the comparison between the predicted and actual electrical load and the values of the metrics.</string>
+
+</resources>
