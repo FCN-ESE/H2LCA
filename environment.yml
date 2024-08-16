@@ -1,0 +1,16 @@
+name: tesa
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - numpy
+  - pyomo
+  - pandas
+  - statsmodels
+  - openpyxl
+  - ipywidgets
+  - traitlets
+  - scipy
+  - tensorflow
+  - keras
+  - scikit-learn
